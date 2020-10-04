@@ -1,8 +1,17 @@
 <template>
   <div>
     <form-helper>
-      <h2 slot="title">{{ title }}</h2>
-      <p slot="text">I am the paragraph</p>
+      <div slot="form-header">
+        <h3>This is the form title</h3>
+        <p>Information about the form</p>
+      </div>
+      <div slot="form-fields">
+        <input type="text" name="name" id="name" placeholder="name" requried />
+        <input type="password" name="password" id="password" />
+      </div>
+      <div slot="form-controls">
+        <button @click="handleSubmit">Submit</button>
+      </div>
     </form-helper>
   </div>
 </template>
